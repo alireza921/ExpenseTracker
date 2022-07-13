@@ -24,29 +24,30 @@ const LoginPage = () => {
     })
     navigate('/')
   };
+
   return (
     <form onSubmit={submitFormHandler}>
-      <div>
-        <label> Name : </label>
+      <div className="my-4">
+        <label className="font-semibold "> Name : </label>
         <input
           type='text'
           onChange={changeHandler}
           value={login.name}
           name='name'
-          className='border-2 border-gray-400'
+          className='border-2 border-violet-400 rounded-lg px-1 outline-none w-full my-1 '
         />
       </div>
-      <div>
-        <label> Email </label>
+      <div >
+        <label className="font-semibold " > Email : </label>
         <input
           type='email'
           onChange={changeHandler}
           value={login.email}
           name='email'
-          className='border-2 border-gray-400'
+          className='border-2 border-violet-400 rounded-lg px-1 outline-none w-full my-1'
         />
       </div>
-      <button> submit </button>
+      <button className=" border-solid w-full bg-violet-400 p-2 text-indigo-50 my-2 rounded-xl"> submit </button>
     </form>
   );
 };

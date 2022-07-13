@@ -7,6 +7,10 @@ const HomePage = () => {
   return (
     <section>
       {auth ? <Home /> : <Link to='/login'> dont Login yet ?</Link>}
+      <div className="flex justify-between my-1"> 
+        <h2 > transAction</h2>
+        <p> view all </p>
+      </div>
     </section>
   );
 };

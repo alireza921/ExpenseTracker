@@ -14,24 +14,32 @@ const Navigation = () => {
   };
 
   return (
-    <header className='flex  justify-between items-center '>
-      <aside className='flex  justify-start items-center'>
+    <section>
+      <h2 className="my-4 font-semibold text-center"> wellCome to expense Tracker App </h2>
+
+      <header className='flex  justify-between items-center '>
+        <aside>
+          {auth && (
+            <div className='flex  justify-start items-center'>
+              <div>
+                <BiUserCircle className='text-2xl text-violet-400 ' />
+              </div>
+              <div className='flex flex-col ml-3 '>
+                <h3 className='text-gray-500 mb- '> WellCome </h3>
+                <p className='font-bold mb-1'>{auth.name}</p>
+              </div>
+            </div>
+          )}
+        </aside>
         <div>
-          <BiUserCircle className='text-2xl text-violet-400 ' />
+          {auth && (
+            <button onClick={logoutHandler}>
+              <BiLogOut className='text-2xl text-violet-400' />
+            </button>
+          )}
         </div>
-        <div className='flex flex-col ml-3 '>
-          <h3 className='text-gray-500 mb- '> WellCome </h3>
-          <p className='font-bold mb-1'>{auth.name}</p>
-        </div>
-      </aside>
-      <div>
-        {auth && (
-          <button onClick={logoutHandler}>
-            <BiLogOut className='text-2xl text-violet-400' />
-          </button>
-        )}
-      </div>
-    </header>
+      </header>
+    </section>
   );
 };
 
