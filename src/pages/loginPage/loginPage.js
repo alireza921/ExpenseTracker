@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { useAuth, useAuthAction } from "../../context/auth/auhContextProvider";
+import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
+  const navigate = useNavigate() ;
   const auth = useAuth();
   const setAuth = useAuthAction();
   const [login, setLogin] = useState({
@@ -20,6 +22,7 @@ const LoginPage = () => {
     setLogin({
       name : "" , email: ""
     })
+    navigate('/')
   };
   return (
     <form onSubmit={submitFormHandler}>
