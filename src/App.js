@@ -6,21 +6,27 @@ import AddNewTransAction from "./pages/add New TransAction/addNewTransAction";
 import TransAction from "./pages/transAction/transAction";
 import LoginPage from "./pages/loginPage/loginPage";
 import AuthContextProvider from "./context/auth/auhContextProvider";
+import TransActionsContextProvider from "./context/expense/expenseContextProvider";
 
 function App() {
   return (
     <div className='App'>
       <AuthContextProvider>
-        <BrowserRouter>
-          <Layout>
-            <Routes>
-              <Route path='/' element={<HomePage />} />
-              <Route path='/add-transaction' element={<AddNewTransAction />} />
-              <Route path='/transaction' element={<TransAction />} />
-              <Route path='/login' element={<LoginPage />} />
-            </Routes>
-          </Layout>
-        </BrowserRouter>
+        <TransActionsContextProvider>
+          <BrowserRouter>
+            <Layout>
+              <Routes>
+                <Route path='/' element={<HomePage />} />
+                <Route
+                  path='/add-transaction'
+                  element={<AddNewTransAction />}
+                />
+                <Route path='/transaction' element={<TransAction />} />
+                <Route path='/login' element={<LoginPage />} />
+              </Routes>
+            </Layout>
+          </BrowserRouter>
+        </TransActionsContextProvider>
       </AuthContextProvider>
     </div>
   );

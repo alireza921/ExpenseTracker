@@ -1,21 +1,21 @@
 import { createContext, useContext, useState } from "react";
 
-const ExpenseContext = createContext();
-const ExpenseContextDispatcher = createContext();
+const TransActionsContext = createContext();
+const TransActionsContextDispatcher = createContext();
 
-const AuthContextProvider = ({ children }) => {
-  const [expense, dispatch] = useState(false);
+const TransActionsContextProvider = ({ children }) => {
+  const [transActions, dispatch] = useState([]);
 
   return (
-    <ExpenseContext.Provider value={expense}>
-      <ExpenseContextDispatcher.Provider value={dispatch}>
+    <TransActionsContext.Provider value={transActions}>
+      <TransActionsContextDispatcher.Provider value={dispatch}>
         {children}
-      </ExpenseContextDispatcher.Provider>
-    </ExpenseContext.Provider>
+      </TransActionsContextDispatcher.Provider>
+    </TransActionsContext.Provider>
   );
 };
 
-export default ExpenseContextProvider;
+export default TransActionsContextProvider;
 
-export const useAuth = () => useContext(ExpenseContext);
-export const useAuthAction = () => useContext(ExpenseContextDispatcher);
+export const useTransActions = () => useContext(TransActionsContext);
+export const useTransActionsAction = () => useContext(TransActionsContextDispatcher);

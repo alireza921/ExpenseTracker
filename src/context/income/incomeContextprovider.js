@@ -1,13 +1,13 @@
 import { createContext, useContext, useState } from "react";
 
-constIncomhContext = createContext();
-constIncomhContextDispatcher = createContext();
+const IncomContext = createContext();
+const IncomContextDispatcher = createContext();
 
-const AuthContextProvider = ({ children }) => {
+const IncomContextProvider = ({ children }) => {
   const [income, dispatch] = useState(false);
 
   return (
-    <IncomContext.Provider value={autincome}>
+    <IncomContext.Provider value={income}>
       <IncomContextDispatcher.Provider value={dispatch}>
         {children}
       </IncomContextDispatcher.Provider>
@@ -15,7 +15,7 @@ const AuthContextProvider = ({ children }) => {
   );
 };
 
-export default IncomeContextProvider;
+export default IncomContextProvider;
 
-export const useAuth = () => useContext(IncomContext);
-export const useAuthAction = () => useContext(IncomContextDispatcher);
+export const useIncom = () => useContext(IncomContext);
+export const useIncomAction = () => useContext(IncomContextDispatcher);

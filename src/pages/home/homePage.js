@@ -11,6 +11,7 @@ const HomePage = () => {
         <h2 > transAction</h2>
         <p> view all </p>
       </div>
+      
     </section>
   );
 };
