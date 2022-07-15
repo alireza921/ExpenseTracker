@@ -6,7 +6,7 @@ import AddNewTransAction from "./pages/add New TransAction/addNewTransAction";
 import TransAction from "./pages/transAction/transAction";
 import LoginPage from "./pages/loginPage/loginPage";
 import AuthContextProvider from "./context/auth/auhContextProvider";
-import TransActionsContextProvider from "./context/expense/expenseContextProvider";
+import TransActionsContextProvider from "./context/transAction/transActionsContextProvider";
 
 function App() {
   return (

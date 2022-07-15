@@ -1,18 +1,14 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   useTransActions,
   useTransActionsAction,
-} from "../../context/expense/expenseContextProvider";
-import {
-  useIncom,
-  useIncomAction,
-} from "../../context/income/incomeContextprovider";
+} from "../../context/transAction/transActionsContextProvider";
 
 const AddNewTransAction = () => {
+  const navigate = useNavigate();
   const transActions = useTransActions();
   const setTransActions = useTransActionsAction();
-  const income = useIncom();
-  const setIncom = useIncomAction();
   const [formValue, setFormValue] = useState({
     date: "",
     title: "",
@@ -34,10 +30,11 @@ const AddNewTransAction = () => {
       desc: "",
       type: "",
     });
+    navigate("/");
   };
   return (
     <div>
-      <h3>addformValue </h3>
+      <h3> Add TransAction </h3>
       <form onSubmit={submitformValueHandler}>
         <div>
           <label> date : </label>
