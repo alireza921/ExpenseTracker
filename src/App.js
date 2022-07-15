@@ -21,7 +21,7 @@ function App() {
                   path='/add-transaction'
                   element={<AddNewTransAction />}
                 />
-                <Route path='/transaction' element={<TransAction />} />
+                <Route path='/transaction/:id' element={<TransAction />} />
                 <Route path='/login' element={<LoginPage />} />
               </Routes>
             </Layout>
