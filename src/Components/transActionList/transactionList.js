@@ -4,7 +4,7 @@ const TransActionList = ({ transActions }) => {
   return (
     <main>
       <div className='flex justify-between my-1'>
-        <h2> transAction</h2>
+        <h2 className="font-bold text-blue-800 text-2xl"> TransActions </h2>
       </div>
      
         {transActions &&
@@ -22,8 +22,8 @@ const TransActionList = ({ transActions }) => {
                 <ul className='flex justify-between mx-1'>
                   <li> {transAction.title} </li>
                   <ul className='my-1 self-end'>
-                    <li> {transAction.amount} </li>
                     <li> {transAction.date} </li>
+                    <li> {transAction.amount} </li>
                   </ul>
                 </ul>
               </section>
