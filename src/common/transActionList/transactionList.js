@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
 
-const TransActionList = ({ transActions }) => {
+const TransActionList = ({ transActions , isShow }) => {
+  console.log(isShow);
   return (
     <main>
       <div className='flex justify-between my-1'>
         <h2 className='font-bold text-blue-800 text-2xl'> TransActions </h2>
       </div>
-      <div className=' max-h-44 overflow-scroll '>
+      <div className={`${!isShow && ' max-h-44 overflow-scroll ' }`}>
         {transActions &&
           transActions.map((transAction) => (
             <Link
