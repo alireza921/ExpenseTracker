@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Navigation from "../Components/navigation/navigation";
 import { useAuth } from "../context/auth/auhContextProvider";
 import { IoMdAdd } from "react-icons/io";
+import Modal from "../common/modal/modal";
 const Layout = ({ children }) => {
   const auth = useAuth();
   return (
@@ -17,6 +18,9 @@ const Layout = ({ children }) => {
           </Link>
         )}
       </div>
+      {/* <div className=' overflow-hidden '>
+        <Modal />
+      </div> */}
     </section>
   );
 };

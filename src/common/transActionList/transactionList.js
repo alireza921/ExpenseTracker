@@ -1,12 +1,12 @@
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const TransActionList = ({ transActions }) => {
   return (
     <main>
       <div className='flex justify-between my-1'>
-        <h2 className="font-bold text-blue-800 text-2xl"> TransActions </h2>
+        <h2 className='font-bold text-blue-800 text-2xl'> TransActions </h2>
       </div>
-     
+      <div className=' max-h-44 overflow-scroll '>
         {transActions &&
           transActions.map((transAction) => (
             <Link
@@ -29,7 +29,7 @@ const TransActionList = ({ transActions }) => {
               </section>
             </Link>
           ))}
-     
+      </div>
     </main>
   );
 };
