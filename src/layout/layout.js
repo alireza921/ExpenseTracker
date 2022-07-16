@@ -11,9 +11,9 @@ const Layout = ({ children }) => {
       <div>
         {auth && (
           <Link to='/add-transaction '>
-            <h1 className='fixed bottom-10 right-4 p-2 z-10 text-2xl  text-gray-100 rounded-full bg-violet-500'>
+            <span className='fixed bottom-10 right-4 p-2 z-10 text-2xl  text-gray-100 rounded-full bg-violet-500'>
               <IoMdAdd />
-            </h1>
+            </span>
           </Link>
         )}
       </div>

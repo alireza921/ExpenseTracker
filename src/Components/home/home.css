@@ -1,0 +1,21 @@
+.maining { 
+    overflow: hidden;
+}
+
+.tr { 
+opacity: 0;
+}
+
+.fl { 
+    background: blue;
+    position: absolute;
+    /* top: 78px; */
+    /* right: 0; */
+    height: 100%;
+    left: 0;
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    /* transition: 0.5s; */
+    transform: translateY(-387px);
+    transition: 0.5s;
+}

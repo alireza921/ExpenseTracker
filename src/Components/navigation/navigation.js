@@ -1,6 +1,6 @@
 import { useAuth, useAuthAction } from "../../context/auth/auhContextProvider";
 import { BiUserCircle } from "react-icons/bi";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { BiLogOut } from "react-icons/bi";
 
 const Navigation = () => {
@@ -18,7 +18,7 @@ const Navigation = () => {
       <h2 className="my-4 font-semibold text-center"> wellCome to expense Tracker App </h2>
 
       <header className='flex  justify-between items-center '>
-        <aside>
+        <Link to='/'>
           {auth && (
             <div className='flex  justify-start items-center'>
               <div>
@@ -30,7 +30,7 @@ const Navigation = () => {
               </div>
             </div>
           )}
-        </aside>
+        </Link>
         <div>
           {auth && (
             <button onClick={logoutHandler}>
