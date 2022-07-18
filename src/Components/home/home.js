@@ -3,6 +3,9 @@ import { useTransActions } from "../../context/transAction/transActionsContextPr
 import TransActionList from "../../common/transActionList/transactionList";
 import Overview from "../overView/overView";
 import Modal from "../../common/modal/modal";
+import { Link } from "react-router-dom";
+import { IoMdAdd } from "react-icons/io";
+
 const Home = () => {
   const [expense, setExpense] = useState(0);
   const [incom, setIncom] = useState(0);
@@ -23,12 +26,19 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden">
+    <div className='overflow-hidden'>
       <section>
         <Overview incom={incom} expense={expense} />
         <TransActionList transActions={transActions} />
       </section>
-      <div  className=' overflow-hidden '>
+      <div>
+        <Link to='/add-transaction '>
+          <span className='fixed bottom-10 right-4 p-2 z-10 text-2xl  text-gray-100 rounded-full bg-violet-500'>
+            <IoMdAdd />
+          </span>
+        </Link>
+      </div>
+      <div className=' overflow-hidden '>
         <Modal />
       </div>
     </div>

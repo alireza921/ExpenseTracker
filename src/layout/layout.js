@@ -9,7 +9,7 @@ const Layout = ({ children }) => {
     <section className='bg-gray-50 rounded-3xl m-4 p-4'>
       <Navigation />
       {children}
-      <div>
+      {/* <div>
         {auth && (
           <Link to='/add-transaction '>
             <span className='fixed bottom-10 right-4 p-2 z-10 text-2xl  text-gray-100 rounded-full bg-violet-500'>
@@ -17,9 +17,6 @@ const Layout = ({ children }) => {
             </span>
           </Link>
         )}
-      </div>
-      {/* <div className=' overflow-hidden '>
-        <Modal />
       </div> */}
     </section>
   );
