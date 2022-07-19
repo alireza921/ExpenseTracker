@@ -31,7 +31,7 @@ const Modal = () => {
       </div>
       <div
         className={`${
-          isShow ? " -translate-y-80 h-full " : " hidden  "
+          isShow ? " -translate-y-80 h-full " : " opacity-0  "
         } ${" mt-5 z-10 p-2  duration-500 bg-violet-200 fixed top-96 left-0 w-full rounded-t-2xl  "}`}>
         <header className="flex justify-around m-2 p-2   ">
           <button className="bg-red-400 text-blue-800  font-medium  p-2     rounded-lg  "  onClick={expenseHandler}> expense </button>
