@@ -26,7 +26,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className='overflow-hidden'>
+    <div>
       <section>
         <Overview incom={incom} expense={expense} />
         <TransActionList transActions={transActions} />
@@ -38,7 +38,7 @@ const Home = () => {
           </span>
         </Link>
       </div>
-      <div className=' overflow-hidden '>
+      <div>
         <Modal />
       </div>
     </div>

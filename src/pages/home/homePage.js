@@ -10,7 +10,13 @@ const HomePage = () => {
 
   return (
     <section>
-      {auth ? <Home /> : <Link to='/login'> dont Login yet ?</Link>}
+      {auth ? (
+        <Home />
+      ) : (
+        <h2 className='text-center font-medium text-blue-800 '>
+          <Link to='/login'> dont Login yet ?</Link>
+        </h2>
+      )}
     </section>
   );
 };
