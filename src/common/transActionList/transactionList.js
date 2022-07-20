@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const TransActionList = ({ transActions , isShow }) => {
-  console.log(isShow);
+  
   return (
     <main>
       <div className='flex justify-between my-1'>

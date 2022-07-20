@@ -7,6 +7,8 @@ import TransAction from "./pages/transAction/transAction";
 import LoginPage from "./pages/loginPage/loginPage";
 import AuthContextProvider from "./context/auth/auhContextProvider";
 import TransActionsContextProvider from "./context/transAction/transActionsContextProvider";
+import EditPage from "./pages/editPage/editPage";
+import NotFound from "./pages/notFound/NotFound";
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
                 />
                 <Route path='/transaction/:id' element={<TransAction />} />
                 <Route path='/login' element={<LoginPage />} />
+                <Route path='/editpage/:id' element={<EditPage />} />
+                <Route path='*' element={<NotFound />} />
               </Routes>
             </Layout>
           </BrowserRouter>

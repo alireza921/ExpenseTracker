@@ -17,7 +17,6 @@ const AddNewTransAction = () => {
     type: "expense",
   });
   const formValueHandler = (e) => {
-    setFormValue(e.target.value);
     setFormValue({ ...formValue, [e.target.name]: e.target.value });
   };
   const submitformValueHandler = (e) => {

@@ -3,11 +3,12 @@ import {
   useTransActions,
   useTransActionsAction,
 } from "../../context/transAction/transActionsContextProvider";
+import { Link } from "react-router-dom";
 
 const TransAction = () => {
   const location = useLocation();
   const transAction = location.state;
-
+console.log(location);
   const navigate = useNavigate();
 
   const transActions = useTransActions();
@@ -24,6 +25,7 @@ const TransAction = () => {
   const editHandler = (id) => {
     console.log(id);
   };
+
   return (
     <section
       className={`${
@@ -42,11 +44,17 @@ const TransAction = () => {
           className='px-4 py-2 bg-violet-800 text-violet-200  my-2 rounded-lg'>
           delete
         </button>
-        <button
-          onClick={() => editHandler(transAction.id)}
-          className='px-4 py-2 bg-violet-800 text-violet-200  my-2 rounded-lg'>
-          Edit
+        <button className='px-4 py-2 bg-violet-800 text-violet-200  my-2 rounded-lg'>
+          <Link
+            to={`/editpage/${transAction.id}`}
+            state={transAction}
+            className='px-4 py-2 bg-violet-800 text-violet-200  my-2 rounded-lg'>
+            Edit
+          </Link>
         </button>
+        {/* <div>
+         
+        </div> */}
       </article>
     </section>
   );
