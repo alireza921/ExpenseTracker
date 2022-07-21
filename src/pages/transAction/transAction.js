@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const TransAction = () => {
   const location = useLocation();
   const transAction = location.state;
-console.log(location);
   const navigate = useNavigate();
 
   const transActions = useTransActions();
@@ -21,9 +20,6 @@ console.log(location);
     );
     setTransAction(filteredTransAction);
     navigate("/");
-  };
-  const editHandler = (id) => {
-    console.log(id);
   };
 
   return (
@@ -52,9 +48,7 @@ console.log(location);
             Edit
           </Link>
         </button>
-        {/* <div>
-         
-        </div> */}
+       
       </article>
     </section>
   );

@@ -13,8 +13,6 @@ const EditPage = () => {
   const setTransActions = useTransActionsAction();
   const transActions = useTransActions();
 
-  console.log("transActions ", transActions);
-
   const [formValue, setFormValue] = useState({
     date: transAction.date,
     title: transAction.title,
@@ -30,27 +28,16 @@ const EditPage = () => {
     const index = transActions.findIndex((t) => t.id === transAction.id);
     console.log(index);
     const updateTransAction = [...transActions];
-    updateTransAction[index] = formValue ;
-    console.log(updateTransAction);
-    setTransActions(updateTransAction)
+    updateTransAction[index] = formValue;
+    setTransActions(updateTransAction);
     navigate("/");
-
-    // setTransActions([...transActions ,  { ...formValue}]);
-    // setFormValue({
-    //   date: "",
-    //   title: "",
-    //   amount: "",
-    //   desc: "",
-    //   type: "",
-    // });
   };
   return (
     <section>
       Edit Page
       <div className=' bg-violet-200 py-1  px-2 rounded-lg my-1 '>
         <h3 className='font-bold my-2 text-blue-800 text-center'>
-          {" "}
-          Add TransAction{" "}
+          Add TransAction
         </h3>
         <form
           onSubmit={submitformValueHandler}

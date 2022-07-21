@@ -22,7 +22,6 @@ const LoginPage = () => {
 
   const onSubmit = (values, { resetForm }) => {
     setAuth(values);
-    console.log("values");
     resetForm({ values: "" });
     navigate("/");
   };
