@@ -37,11 +37,11 @@ const AddNewTransAction = () => {
       <h3 className='font-bold my-2 text-blue-800 text-center'> Add TransAction </h3>
       <form
         onSubmit={submitformValueHandler}
-        className='flex flex-col items-start mx-1 pt-2'>
+        className='flex flex-col items-start mx-1 pt-2 md:items-center '>
         <div className=' my-1 flex justify-around    items-center'>
-          <label className='w-24 '> date : </label>
+          <label className='w-24  '> date : </label>
           <input
-            className='px-2 outline-none   rounded-lg focus:border-2 border-solid border-violet-800'
+            className='w-40 px-2 outline-none   rounded-lg focus:border-2 border-solid border-violet-800 md:w-64'
             type='date'
             name='date'
             value={formValue.date}
@@ -49,9 +49,9 @@ const AddNewTransAction = () => {
           />
         </div>
         <div className=' my-1 flex justify-around   items-center '>
-          <label className='w-24 '> Title </label>
+          <label className='w-24  '> Title </label>
           <input
-            className='px-2 outline-none   rounded-lg focus:border-2 border-solid border-violet-800'
+            className=' w-40  px-2 outline-none   rounded-lg focus:border-2 border-solid border-violet-800 md:w-64'
             type='text'
             name='title'
             value={formValue.title}
@@ -59,9 +59,9 @@ const AddNewTransAction = () => {
           />
         </div>
         <div className=' my-1 flex justify-around  items-center '>
-          <label className='w-24 '> amount </label>
+          <label className='w-24  '> amount </label>
           <input
-            className='px-2 outline-none   rounded-lg focus:border-2 border-solid border-violet-800'
+            className=' w-40  px-2 outline-none   rounded-lg focus:border-2 border-solid border-violet-800 md:w-64'
             type='number'
             onChange={formValueHandler}
             name='amount'
@@ -69,16 +69,16 @@ const AddNewTransAction = () => {
           />
         </div>
         <div className=' my-1 flex justify-around   items-center'>
-          <label className='w-24 '>describtion </label>
+          <label className='w-24  '>describtion </label>
           <textarea
-            className='px-2 outline-none   rounded-lg focus:border-2 border-solid border-violet-800'
+            className=' w-40  px-2 outline-none   rounded-lg focus:border-2 border-solid border-violet-800 md:w-64'
             name='desc'
             value={formValue.desc}
             onChange={formValueHandler}
           />
         </div>
 
-        <footer className='w-full flex  flex-col justify-around'>
+        <div className='w-full flex  flex-col justify-around md:flex-row md:w-44 md:items-center'>
           <div className="my-1">
             <input
               id='expense'
@@ -102,10 +102,11 @@ const AddNewTransAction = () => {
             <label htmlFor='incom'> Incom</label>
           </div>
 
-          <button type='submit' className=' bg-violet-800 px-3 py-1 rounded-lg text-violet-200 my-2 self-center'>
+         
+        </div>
+        <button type='submit' className=' bg-violet-800 px-3 py-1 rounded-lg text-violet-200 my-2 self-center'>
             Add New TransAction
           </button>
-        </footer>
       </form>
     </div>
   );

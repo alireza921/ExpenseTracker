@@ -34,31 +34,35 @@ const LoginPage = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={formik.handleSubmit} className=' md:flex md:flex-col md:w-full md:items-center md:justify-center '>
       <div className='my-4'>
-        <label className='font-semibold '> Name : </label>
-        <input
-          type='text'
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.name}
-          name='name'
-          className='border-2 border-violet-400 rounded-lg px-1 outline-none w-full my-1 '
-        />
+        <div className='md:flex  md:justify-around items-center'>
+          <label className='font-semibold  w-40'> Name : </label>
+          <input
+            type='text'
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.name}
+            name='name'
+            className='border-2 border-violet-400 rounded-lg px-1 outline-none w-full my-1 md:w-full '
+          />
+        </div>
         {formik.errors.name && formik.touched.name && (
           <div className='text-red-600 mb-1'> {formik.errors.name} </div>
         )}
       </div>
-      <div>
-        <label className='font-semibold '> Email : </label>
-        <input
-          type='email'
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
-          name='email'
-          className='border-2 border-violet-400 rounded-lg px-1 outline-none w-full my-1'
-        />
+      <div className="my-4">
+        <div className='md:flex  md:justify-around items-center'>
+          <label className='font-semibold  w-40 '> Email : </label>
+          <input
+            type='email'
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+            name='email'
+            className='border-2 border-violet-400 rounded-lg px-1 outline-none w-full my-1md:w-full'
+          />
+        </div>
         {formik.errors.email && formik.touched.email && (
           <div className='text-red-600 mb-1'> {formik.errors.email} </div>
         )}
@@ -68,7 +72,7 @@ const LoginPage = () => {
         type='submit'
         className={`${
           !formik.isValid && "bg-gray-200 text-violet-800 cursor-not-allowed"
-        } ${" border-solid w-full bg-violet-400 p-2 text-indigo-50 my-2 rounded-xl"}`}>
+        } ${" border-solid w-full bg-violet-400 p-2 text-indigo-50 my-2 rounded-xl md:w-64 "}`}>
         submit
       </button>
     </form>
